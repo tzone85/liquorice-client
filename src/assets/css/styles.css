@@ -1,0 +1,321 @@
+@font-face {
+    font-family: ChelseaMarketRegular;
+    src: url(../fonts/ChelseaMarket-Regular.ttf);
+}
+@font-face {
+    font-family: DINProBold;
+    src: url(../fonts/DINPro-Bold_13934.woff);
+}
+@font-face {
+    font-family: DINProRegular;
+    src: url(../fonts/DINPro-Regular_13937.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/bg.png") 0 0 no-repeat;
+}
+
+header {
+    background: #7389F1;
+}
+
+header button.btn {
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+nav {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+}
+
+nav ul {
+    display: block;
+    position: relative;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+    width: auto;
+}
+
+nav ul li a {
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+@media ( max-width: 500px) {
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+        width: auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    header button.btn {
+        margin-left: 4px;
+    }
+}
+
+#left-column {
+    background: url("../images/clouds.png") 0 300px no-repeat;
+    min-height: 600px;
+    padding-bottom: 200px;
+}
+
+.profile-container {
+    margin-left: 118px;
+    margin-top: 150px;
+    width: 552px;
+    min-height: 600px;
+}
+
+.avatar-container {
+    background: url("../images/avatar-bg.png") 0 0 no-repeat;
+    height: 432px;
+    width: 459px;
+}
+
+.avatar {
+    margin-top: 100px;
+}
+
+.name {
+    margin-top: 30px;
+    font-family: DINProBold;
+    font-weight: lighter;
+    font-size: 60px;
+    color: #3B38D4;
+    letter-spacing: 0.4px;
+    text-align: center;
+    line-height: 71px;
+}
+
+.level {
+    font-family: DINProRegular;
+    font-size: 30px;
+    color: #212765;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+.profile-details {
+    width: 400px;
+}
+
+.point-holder {
+    margin-top: 40px;
+    width: 400px;
+}
+
+.point-text {
+    font-family: DINProRegular;
+    font-size: 28px;
+    color: #3B38D4;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 20.84px;
+
+}
+
+.point-value {
+    font-family: DINProBold;
+    font-size: 110px;
+    color: #3B38D4;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 40px;
+}
+
+.point-motivation {
+    font-family: DINProRegular;
+    font-size: 14px;
+    color: #1F213C;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 20.84px;
+    margin-top: 40px;
+}
+
+#right-column {
+    margin-top: 144px;
+    width: 870px;
+}
+
+#right-column h2.heading {
+    font-family: ChelseaMarketRegular;
+    font-size: 72px;
+    color: #3B38D4;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 90px;
+}
+
+#right-column .leaderboard {
+}
+
+#right-column .leaderboard .row {
+    padding: 10px 0;
+    border-bottom: 1px solid #EE70A7;
+}
+
+#right-column .leaderboard .lead-index {
+    font-family: DINProBold;
+    /*font-size: 30px;*/
+    color: #EE70A7;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-top: 10px;
+    max-width: 50px;
+    text-align: right;
+}
+
+#right-column .lead-avatar {
+    max-width: 70px;
+}
+
+#right-column .lead-avatar span.avatar-placeholder {
+    background: #EE70A7;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+#right-column .leaderboard .lead-name {
+    font-family: DINProBold;
+    color: #1F213C;
+    letter-spacing: 0;
+    line-height: 26px;
+    /*margin-top: 10px;*/
+    max-width: 354px;
+}
+
+#right-column .leaderboard .lead-name .level {
+    font-family: DINProRegular;
+    font-size: 16px;
+    color: #1F213C;
+    letter-spacing: 0;
+    line-height: 8px;
+    /*margin-top: 10px;*/
+}
+
+#right-column .leaderboard .leaderboard-points {
+    font-family: DINProBold;
+    /*font-size: 30px;*/
+    color: #EE70A7;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-top: 10px;
+    max-width: 50px;
+}
+
+#right-column .leaderboard .row.winner {
+    background: #EE70A7;
+    border-radius: 40px;
+}
+
+#right-column .leaderboard .row.winner .winner-star {
+    position: relative;
+    right: -82px;
+    top: -19px;
+    display: block;
+}
+
+#right-column .leaderboard .row.winner .lead-index {
+    color: #FFFFFF;
+}
+#right-column .leaderboard .row.winner .lead-avatar span.avatar-placeholder{
+    background: #FFFFFF;
+}
+#right-column .leaderboard .row.winner .lead-name, #right-column .leaderboard .row.winner .lead-name span, #right-column .leaderboard .row.winner .leaderboard-points {
+    color: #FFFFFF;
+}
+
+.basic-education {
+    text-align: left;
+}
+
+.unilever {
+    text-align: right;
+    border-left: 2px solid #0460A7;
+}
+
+footer {
+    background: #F4F5F8;
+    padding: 20px;
+}
+
+footer section {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    padding: 5px
+}
+
+footer nav ul li a{
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #212669;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 34px;
+}
+
+footer nav ul li a.active {
+    font-weight: bold;
+    /*font-style: ;*/
+}
+
+footer .copy {
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #212669;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 34px;
+}
+
+footer .social-btns {
+    padding-top: 15px;
+}
+
+footer .social-btns a {
+    color: #1F213C;
+}
+
+footer .social-btns a span {
+    background: #EDEEEF;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    /* padding-left: 10px; */
+    padding-top: 10px;
+/* padding-right: 7px; */
+/* padding-bottom: 8px;*/
+}
+
+.tree-style {
+    position: absolute;
+    z-index: -1;
+    bottom: -62px;
+    left: 0;
+}
