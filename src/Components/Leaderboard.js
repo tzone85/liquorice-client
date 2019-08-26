@@ -27,7 +27,7 @@ class Leaderboard extends Component {
         return <fregment>
 
             <h2 className="heading text-center mt-5 mb-5">Hygienica Leaderboard</h2>
-            <div className="leaderboard">
+            <div className="leaderboard mb-5">
                 <div className="row winner">
                     <div className="col lead-index">{first.id}</div>
                     <div className="col lead-avatar">
@@ -46,6 +46,7 @@ class Leaderboard extends Component {
                 </div>
                 {this.state.users.filter(item => item.id !== 1).map(user => <Leader user={user} />)}
             </div>
+            <button className="d-lg-none d-xl-none d-sm load-more">Load More</button>
         </fregment>
     }
 }

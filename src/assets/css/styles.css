@@ -406,3 +406,15 @@ footer .social-btns a span {
         padding-left: 16px;
     }
 }
+
+.load-more {
+    background: #3B38D4;
+    border-radius: 43.5px;
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    text-align: center;
+    line-height: 23.07px;
+    padding: 20px 70px
+}
