@@ -20,6 +20,7 @@ class Leader extends Component {
                     <span className="level">Bathroom Beginner</span>
                 </div>
                 <div className="col leaderboard-points">{this.props.user.totalScore}</div>
+                <div className="col leaderboard-star"></div>
             </div>
         </fragment>
     }

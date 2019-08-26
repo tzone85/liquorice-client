@@ -7,9 +7,10 @@ class Profile extends Component{
 
         return <fragment>
 
-                <div className="profile-container text-center">
+                <div className="profile-container text-center pl-sm-5">
                     <div className="avatar-container">
-                        <img className="avatar" src="/images/avatar.png" width="223" height="204"/>
+                        <img className="avatar d-none d-lg-inline-block d-xl-inline-block" src="/images/avatar.png" width="223" height="204"/>
+                        <img className="avatar d-none d-lg-none d-xl-none d-inline-block" src="/images/avatar-mobile.png" width="175" height="161"/>
                     </div>
                     <div className="profile-details">
                         <div className="name text-center">
@@ -28,7 +29,6 @@ class Profile extends Component{
                         </div>
                     </div>
                 </div>
-                <img className='tree-style' src="/images/tree-wt-grass.png" />
         </fragment>
     }
 }
