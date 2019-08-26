@@ -2,10 +2,12 @@
     font-family: ChelseaMarketRegular;
     src: url(../fonts/ChelseaMarket-Regular.ttf);
 }
+
 @font-face {
     font-family: DINProBold;
     src: url(../fonts/DINPro-Bold_13934.woff);
 }
+
 @font-face {
     font-family: DINProRegular;
     src: url(../fonts/DINPro-Regular_13937.woff);
@@ -22,6 +24,17 @@ body {
 
 header {
     background: #7389F1;
+}
+
+@media (max-width: 640px) {
+    body {
+        background: url("../images/top-bg-mobile.png") 0 0 no-repeat;
+    }
+
+    header {
+        padding: 20px 0 0 0;
+        height: 70px;
+    }
 }
 
 header button.btn {
@@ -59,21 +72,29 @@ nav ul li a {
 }
 
 @media ( max-width: 500px) {
-    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-        width: auto;
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    header button.btn {
-        margin-left: 4px;
-    }
+    /*.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {*/
+    /*width: auto;*/
+    /*padding-right: 0;*/
+    /*padding-left: 0;*/
+    /*}*/
+    /*header button.btn {*/
+    /*margin-left: 4px;*/
+    /*}*/
+    /*#accountDropDownMennu span.accountText {*/
+    /*display: none !important;*/
+    /*}*/
 }
 
 #left-column {
     background: url("../images/clouds.png") 0 300px no-repeat;
     min-height: 600px;
     padding-bottom: 200px;
+}
+
+@media (max-width: 640px) {
+    #left-column {
+        background: none;
+    }
 }
 
 .profile-container {
@@ -89,8 +110,27 @@ nav ul li a {
     width: 459px;
 }
 
+@media (max-width: 640px) {
+    .profile-container {
+        margin-left: 60px;
+        margin-top: 0;
+    }
+
+    .avatar-container {
+        background: url("../images/avatar-bg-mobile.png") 0 0 no-repeat;
+        width: 431px;
+        height: 370px;
+    }
+}
+
 .avatar {
     margin-top: 100px;
+}
+
+@media (max-width: 640px) {
+    .avatar {
+        margin-left: -52px;
+    }
 }
 
 .name {
@@ -225,24 +265,33 @@ nav ul li a {
     max-width: 50px;
 }
 
+#right-column .leaderboard .leaderboard-star {
+    font-family: DINProBold;
+    /*font-size: 30px;*/
+    color: #EE70A7;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-top: 10px;
+    max-width: 50px;
+}
+
 #right-column .leaderboard .row.winner {
     background: #EE70A7;
     border-radius: 40px;
 }
 
 #right-column .leaderboard .row.winner .winner-star {
-    position: relative;
-    right: -82px;
-    top: -19px;
-    display: block;
+    color: #FFFFFF;
 }
 
 #right-column .leaderboard .row.winner .lead-index {
     color: #FFFFFF;
 }
-#right-column .leaderboard .row.winner .lead-avatar span.avatar-placeholder{
+
+#right-column .leaderboard .row.winner .lead-avatar span.avatar-placeholder {
     background: #FFFFFF;
 }
+
 #right-column .leaderboard .row.winner .lead-name, #right-column .leaderboard .row.winner .lead-name span, #right-column .leaderboard .row.winner .leaderboard-points {
     color: #FFFFFF;
 }
@@ -254,9 +303,18 @@ nav ul li a {
 .unilever {
     text-align: right;
     border-left: 2px solid #0460A7;
+
+}
+
+.tree-style {
+    position: absolute;
+    z-index: -1;
+    left: 0;
 }
 
 footer {
+    margin-bottom: -560px;
+    margin-top: 262px;
     background: #F4F5F8;
     padding: 20px;
 }
@@ -271,7 +329,7 @@ footer nav ul li {
     padding: 5px
 }
 
-footer nav ul li a{
+footer nav ul li a {
     font-family: Helvetica;
     font-size: 14px;
     color: #212669;
@@ -309,13 +367,32 @@ footer .social-btns a span {
     display: inline-block;
     /* padding-left: 10px; */
     padding-top: 10px;
-/* padding-right: 7px; */
-/* padding-bottom: 8px;*/
+    /* padding-right: 7px; */
+    /* padding-bottom: 8px;*/
 }
 
-.tree-style {
-    position: absolute;
-    z-index: -1;
-    bottom: -62px;
-    left: 0;
+@media ( max-width: 640px) {
+
+    footer {
+        margin-bottom: -710px;
+        margin-top: 500px;
+
+    }
+
+    footer .social-btns a span {
+        padding-left: 0px;
+    }
+}
+
+@media ( max-width: 500px) {
+
+    footer {
+        margin-bottom: -710px;
+        margin-top: 500px;
+
+    }
+
+    footer .social-btns a span {
+        padding-left: 16px;
+    }
 }

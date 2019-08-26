@@ -26,7 +26,7 @@ class Leaderboard extends Component {
 
         return <fregment>
 
-            <h2 className="heading text-center">Hygienica Leaderboard</h2>
+            <h2 className="heading text-center mt-5 mb-5">Hygienica Leaderboard</h2>
             <div className="leaderboard">
                 <div className="row winner">
                     <div className="col lead-index">{first.id}</div>
@@ -37,7 +37,10 @@ class Leaderboard extends Component {
                         {first.firstName} {first.lastName} <br/>
                         <span className="level">Bathroom Beginner</span>
                     </div>
-                    <div className="col leaderboard-points">{first.totalScore}
+                    <div className="col leaderboard-points">
+                        {first.totalScore}
+                    </div>
+                    <div className="col  leaderboard-star">
                         <i className="fa fa-star winner-star"></i>
                     </div>
                 </div>
