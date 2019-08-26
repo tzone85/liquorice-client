@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
 
         return <fragment>
-            <header className="">
+            <header>
                 <div className="row">
                     <div className="col">
                         <button className="btn ml-sm-1"><i className="fa fa-chevron-left mr-3"></i> Back to website
