@@ -1,0 +1,14 @@
+@startuml deployment
+title Deployment — static SPA + optional backend
+
+skinparam shadowing false
+
+node "Browser" as browser
+node "Static host\n(GitHub Pages / CF Pages / Vercel)" as static {
+  folder "dist/" as dist
+}
+node "Backend API\n(optional)" as api
+
+browser --> static : load HTML/JS/CSS
+browser --> api : /api/users (when VITE_API_BASE set)
+@enduml

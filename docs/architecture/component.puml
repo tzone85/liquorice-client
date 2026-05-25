@@ -1,0 +1,36 @@
+@startuml component
+title Liquorice Leaderboard — Component Architecture
+
+skinparam componentStyle rectangle
+skinparam shadowing false
+
+actor User
+
+package "React 18 SPA" {
+  [App.jsx\n(composition root)] as app
+  [Profile.jsx] as profile
+  [Leaderboard.jsx\n(load-more pagination)] as lb
+  [Leader.jsx] as leader
+  [useLeaderboard hook] as hook
+  [leaderboard-api\n(fetch + mock)] as api
+  [LEADERBOARD_FIXTURE] as fixture
+}
+
+cloud "/api/users\nbackend (optional)" as backend
+
+User --> app
+app --> profile : passes user + position
+app --> lb : passes users, loading, error, onRetry
+lb --> leader : per row
+app --> hook : useLeaderboard()
+hook --> api : fetchLeaderboard()
+api --> backend : VITE_API_BASE !== mock://
+api --> fixture : VITE_API_BASE == mock:// (default)
+
+note bottom of api
+  Returns {ok, users} or
+  {ok:false, error:{status,message}}.
+  Hook surfaces loading + error +
+  retry to the view.
+end note
+@enduml
