@@ -1,0 +1,6 @@
+:root { --brand: #c1272d; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #fafafa; }
+.heading { font-weight: 700; color: var(--brand); }
+.winner { background: #fff9e6; border-left: 4px solid var(--brand); }
+.lead-name small { display: block; }
+.point-value { color: var(--brand); }

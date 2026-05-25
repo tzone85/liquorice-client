@@ -1,0 +1,22 @@
+@startuml sequence_load
+title Sequence — initial leaderboard load
+
+skinparam shadowing false
+
+actor User
+participant "App" as App
+participant "useLeaderboard" as Hook
+participant "leaderboard-api" as API
+participant "Backend or fixture" as Source
+
+User -> App : open /
+App -> Hook : useLeaderboard()
+Hook -> Hook : setLoading(true)
+Hook -> API : fetchLeaderboard()
+API -> Source : GET /api/users (or fixture)
+Source --> API : users[]
+API --> Hook : {ok, users}
+Hook -> Hook : setUsers + setLoading(false)
+Hook --> App : {users, loading:false, error:null}
+App --> User : renders Profile + Leaderboard
+@enduml
